@@ -64,9 +64,9 @@
    ```bash
    pip install -r requirements.txt
    ```
-   或者使用最小依赖：
-   ```bash
-   pip install -r requirements-minimal.txt
+   便携环境安装依赖：
+    ```bash
+   python -m pip install -r requirements.txt
    ```
 3. 重启 ComfyUI。
 
