@@ -1,0 +1,7 @@
+sqlalchemy>=1.4,<3
+json-repair>=0.25.0
+requests>=2.28.0
+openai-whisper
+huggingface-hub>=0.19.0
+transformers>=4.36.0
+faster-whisper
