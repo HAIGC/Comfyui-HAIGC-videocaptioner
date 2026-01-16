@@ -68,6 +68,8 @@
     ```bash
    python -m pip install -r requirements.txt
    ```
+   模型下载：https://huggingface.co/CWTchen/Belle-whisper-large-v3-zh-punct-ct2-float32/tree/main
+   模型放到models/whisper目录下
 3. 重启 ComfyUI。
 
 ## 📞 联系方式
