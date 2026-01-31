@@ -55,7 +55,10 @@
 ### 7. 配置节点
 - **TranscribeConfig (转录配置)**：设置 ASR 模型、VAD 阈值等。
 - **LLMConfig (LLM 配置)**：配置 LLM API（Base URL, API Key 等）。
-- **TranslateConfig (翻译配置)**：配置翻译的目标语言和风格。
+- **TranslateConfig (翻译配置)**：配置翻译器类型（LLM/DeepLx/微软/谷歌）、目标语言、批处理参数等。
+
+### 8. 工具节点
+- **LoadVideo (加载视频)**：简单的视频加载工具，返回视频路径和信息。
 
 ## 📦 安装说明
 
@@ -68,8 +71,15 @@
     ```bash
    python -m pip install -r requirements.txt
    ```
-   模型下载：https://huggingface.co/CWTchen/Belle-whisper-large-v3-zh-punct-ct2-float32/tree/main
-   模型放到models/whisper目录下
+   模型下载：
+   - 推荐模型：[Belle-whisper-large-v3-zh-punct](https://huggingface.co/CWTchen/Belle-whisper-large-v3-zh-punct-ct2-float32)
+   - 官方模型：[Faster Whisper Models](https://huggingface.co/guillaumekln)
+   
+   模型放置路径（ComfyUI 根目录下的 `models/whisper`）：
+   - `models/whisper/Belle-whisper-large-v3-zh-punct-ct2-float32` (推荐)
+   - `models/whisper/faster-whisper-medium`
+   - `models/whisper/faster-whisper-large-v3`
+   - 等等...
 3. 重启 ComfyUI。
 
 ## 📞 联系方式
