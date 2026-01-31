@@ -56,8 +56,8 @@ class TranscribeConfigNode:
             "required": {
                 "转录模型": ([
                     "Whisper",
-                    "剪映接口",
-                    "必剪接口",
+                    "J接口",
+                    "B接口",
                 ], {
                     "default": "Whisper"
                 }),
@@ -136,10 +136,8 @@ class TranscribeConfigNode:
         # 映射模型名称
         model_mapping = {
             "Whisper": TranscribeModelEnum.FASTER_WHISPER,
-            "J 接口": TranscribeModelEnum.JIANYING,
-            "B 接口": TranscribeModelEnum.BIJIAN,
-            "剪映接口": TranscribeModelEnum.JIANYING,
-            "必剪接口": TranscribeModelEnum.BIJIAN,
+            "J接口": TranscribeModelEnum.JIANYING,
+            "B接口": TranscribeModelEnum.BIJIAN,
         }
         
         # Whisper 原版模型映射
