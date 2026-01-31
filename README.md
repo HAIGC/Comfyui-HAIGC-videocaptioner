@@ -6,7 +6,7 @@
 
 ## ✨ 主要功能
 
-- **多引擎语音识别 (ASR)**：支持 FasterWhisper 本地模型、剪映接口、必剪接口，提供高精度语音转文字。
+- **多引擎语音识别 (ASR)**：支持 FasterWhisper 本地模型、J接口、B接口，提供高精度语音转文字。
 - **智能字幕处理**：
   - **智能断句**：基于 VAD 和语义分析的智能断句。
   - **字幕优化**：
@@ -21,7 +21,7 @@
 ### 1. VideoTranscribe (视频转录)
 核心节点，用于从视频中提取语音并生成字幕。
 - **输入**：视频文件、转录配置
-- **功能**：支持选择不同的 ASR 模型（Whisper/剪映/必剪）进行转录。
+- **功能**：支持选择不同的 ASR 模型（FasterWhisper/J接口/B接口）进行转录。
 
 ### 2. SubtitleTextProcessor (字幕文本处理器)
 用于对生成的字幕文本进行后期处理和校对。
@@ -53,8 +53,13 @@
 对长语音段落进行更细粒度的切分。
 
 ### 7. 配置节点
-- **TranscribeConfig (转录配置)**：设置 ASR 模型、VAD 阈值等。
-- **LLMConfig (LLM 配置)**：配置 LLM API（Base URL, API Key 等）。
+- **TranscribeConfig (转录配置)**：
+  - **转录模型**：FasterWhisper / J接口 / B接口。
+  - **语言**：支持多种语言或自动检测。
+  - **模型大小**：选择 Whisper 模型大小 (tiny 到 large-v3)。
+  - **提示模式**：支持“自动优化”、“中英混合”、“纯中文”等模式，优化识别效果。
+  - **语音检测 (VAD)**：支持 Silero V4/V3 等多种 VAD 方法，可配置阈值。
+- **LLMConfig (LLM 配置)**：配置 LLM API（Base URL, API Key, 模型, 温度, 线程数）。
 - **TranslateConfig (翻译配置)**：配置翻译器类型（LLM/DeepLx/微软/谷歌）、目标语言、批处理参数等。
 
 ### 8. 工具节点
